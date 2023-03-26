@@ -1,0 +1,24 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:base"],
+  "packageRules": [
+    
+    /* Group by update type - major, minor, patch */
+    {
+      "groupName": "major",
+      "matchUpdateTypes": ["major"]
+    },
+    {
+      "groupName": "minor and patch",
+      "matchUpdateTypes": ["minor", "patch"]
+    },
+    
+    /* Suppress Low and Neutral confidence updates - with a badge in the issue dashboard */
+    {
+      "matchConfidence": ["low", "neutral"],
+      "dependencyDashboardApproval": true,
+      "commitMessagePrefix": "![confidence](https://badges.renovateapi.com/packages/{{datasource}}/{{replace '/' '%2f' depName}}/{{{toVersion}}}/confidence-slim/{{{fromVersion}}})  ",
+    },
+
+  ]
+}
