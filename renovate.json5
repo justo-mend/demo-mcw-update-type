@@ -12,6 +12,14 @@
 
     /* Group by update type - major, minor, patch */
     {
+      "groupName": "major - low/neutral confidence",
+      "matchUpdateTypes": ["major"],
+    },
+    {
+      "groupName": "minor and patch - low/neutral confidence",
+      "matchUpdateTypes": ["minor", "patch"],
+    },
+    {
       "groupName": "major - high confidence",
       "matchUpdateTypes": ["major"],
       "matchConfidence": ["high", "very high"],
