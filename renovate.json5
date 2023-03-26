@@ -3,12 +3,13 @@
   "extends": ["config:base"],
   "packageRules": [
     
-    /* Suppress Low and Neutral confidence updates - with a badge in the issue dashboard */
+    /* Suppress Low and Neutral confidence updates - with a badge in the issue dashboard
     {
       "matchConfidence": ["low", "neutral"],
       "dependencyDashboardApproval": true,
       "commitMessagePrefix": "![confidence](https://badges.renovateapi.com/packages/{{datasource}}/{{replace '/' '%2f' depName}}/{{{toVersion}}}/confidence-slim/{{{fromVersion}}})  ",
     },
+    */
 
     /* Group by update type - major, minor, patch */
     {
